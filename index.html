@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExampleCompany - IT Solutions & Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span>Example<span class="highlight">Company</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#stats">Results</a></li>
+                <li><a href="#contact" class="btn btn-nav">Get in Touch</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Trusted by 200+ Companies Worldwide</div>
+                <h1>We Build <span class="gradient-text">Digital Solutions</span> That Drive Growth</h1>
+                <p class="hero-subtitle">From custom software to cloud infrastructure, we deliver end-to-end IT solutions that transform businesses and accelerate innovation.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg">Start a Project</a>
+                    <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
+                </div>
+                <div class="hero-clients">
+                    <span>Trusted by</span>
+                    <div class="client-logos">
+                        <div class="client-logo">Shopify</div>
+                        <div class="client-logo">AWS</div>
+                        <div class="client-logo">Google</div>
+                        <div class="client-logo">Microsoft</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">solution.ts</span>
+                    </div>
+                    <div class="window-body">
+                        <pre><code><span class="kw">const</span> <span class="fn">buildSolution</span> = <span class="kw">async</span> () => {
+  <span class="kw">const</span> strategy = <span class="kw">await</span> <span class="fn">analyze</span>(
+    business.needs
+  );
+  <span class="kw">const</span> solution = <span class="kw">await</span> <span class="fn">develop</span>({
+    tech: strategy.stack,
+    team: <span class="str">"expert"</span>,
+    quality: <span class="str">"enterprise"</span>
+  });
+  <span class="kw">return</span> solution.<span class="fn">deploy</span>();
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2>Services That <span class="gradient-text">Empower</span> Your Business</h2>
+                <p>We deliver comprehensive IT solutions tailored to your unique business challenges.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications built with modern frameworks for performance and scalability.</p>
+                    <ul class="service-tags">
+                        <li>React</li><li>Next.js</li><li>Node.js</li>
+                    </ul>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud architecture, migration, and DevOps services to optimize your infrastructure.</p>
+                    <ul class="service-tags">
+                        <li>AWS</li><li>Azure</li><li>Docker</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications that deliver exceptional user experiences.</p>
+                    <ul class="service-tags">
+                        <li>React Native</li><li>Flutter</li><li>iOS</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Intelligent automation and data-driven solutions powered by cutting-edge AI technology.</p>
+                    <ul class="service-tags">
+                        <li>Python</li><li>TensorFlow</li><li>LLMs</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security audits, penetration testing, and compliance solutions for your business.</p>
+                    <ul class="service-tags">
+                        <li>Audit</li><li>Compliance</li><li>Monitoring</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Human-centered design that creates intuitive, engaging digital experiences your users love.</p>
+                    <ul class="service-tags">
+                        <li>Figma</li><li>Prototyping</li><li>Research</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">Why Choose Us</span>
+                <h2>A Team of <span class="gradient-text">Passionate</span> Innovators</h2>
+                <p class="about-text">With over a decade of experience, we've helped startups and enterprises alike turn their vision into reality. Our approach combines technical excellence with strategic thinking.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon">&#10003;</div>
+                        <div>
+                            <h4>Agile Development</h4>
+                            <p>Iterative sprints with transparent communication and rapid delivery.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">&#10003;</div>
+                        <div>
+                            <h4>24/7 Support</h4>
+                            <p>Round-the-clock support and maintenance for all our solutions.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">&#10003;</div>
+                        <div>
+                            <h4>Scalable Architecture</h4>
+                            <p>Solutions built to grow with your business from day one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-card card-1">
+                    <div class="about-card-icon">&#9889;</div>
+                    <h4>Fast Delivery</h4>
+                    <p>2x faster than industry average</p>
+                </div>
+                <div class="about-card card-2">
+                    <div class="about-card-icon">&#9733;</div>
+                    <h4>5-Star Rated</h4>
+                    <p>On Clutch & GoodFirms</p>
+                </div>
+                <div class="about-card card-3">
+                    <div class="about-card-icon">&#128640;</div>
+                    <h4>200+ Projects</h4>
+                    <p>Delivered successfully</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="200">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Team Members</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="12">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Enquiry Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Let's Build Something <span class="gradient-text">Amazing</span> Together</h2>
+                <p>Ready to start your project? Fill out the form and our team will get back to you within 24 hours.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-item-label">Email</span>
+                            <span class="contact-item-value">info@examplecompany.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-item-label">Phone</span>
+                            <span class="contact-item-value">+1 (555) 123-4567</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-item-label">Office</span>
+                            <span class="contact-item-value">Kolkata, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="enquiryForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Website Development Inquiry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+                        <span class="btn-text">Send Enquiry</span>
+                        <span class="btn-loader" style="display:none;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" class="spinner"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="31.4 31.4" stroke-linecap="round"/></svg>
+                            Sending...
+                        </span>
+                    </button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">&lt;/&gt;</span>
+                        <span>Example<span class="highlight">Company</span></span>
+                    </a>
+                    <p>Building innovative digital solutions that drive growth and transform businesses worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Cloud Solutions</a></li>
+                        <li><a href="#services">Mobile Apps</a></li>
+                        <li><a href="#services">AI & ML</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#stats">Our Results</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter / X</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ExampleCompany. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
