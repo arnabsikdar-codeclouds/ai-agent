@@ -28,6 +28,43 @@ A modern, responsive landing page for an IT solutions company built with vanilla
 - Vanilla JavaScript (No frameworks)
 - Google Fonts (Inter)
 
+## Make.com Integration
+
+The contact form is powered by a [Make.com](https://www.make.com/) (formerly Integromat) automation scenario.
+
+**Scenario:** [Integration Webhooks → Gmail](https://eu1.make.com/public/shared-scenario/1OdhEvki1X8/integration-webhooks-gmail)
+
+### Flow
+
+```
+                                          ┌─ Approved ─→ Gmail (Send email) ─→ Gmail (Send email) ─→ Google Sheets (Add Row)
+User submits form → Webhook → OpenAI → Router
+                                          └─ Rejected ─→ Google Sheets (Add Row)
+```
+
+### How It Works
+
+1. **Webhook Trigger** - The form in `script.js` sends a `POST` request with `FormData` to a Make.com webhook endpoint (`hook.eu1.make.com`). The webhook captures four fields:
+   - `name` - Full name of the enquirer
+   - `email` - Their email address
+   - `subject` - Enquiry subject
+   - `message` - Message body
+2. **OpenAI (ChatGPT)** - The enquiry data is sent to OpenAI via a simple text prompt to analyze/process the submission (e.g., classify intent, generate a response, or validate the enquiry).
+3. **Router** - Based on the OpenAI output, the flow splits into two paths:
+   - **Approved path:**
+     - **Gmail #1** - Sends a notification email (e.g., to the company inbox with enquiry details).
+     - **Gmail #2** - Sends a second email (e.g., an auto-reply/acknowledgement to the enquirer).
+     - **Google Sheets** - Logs the approved enquiry as a new row in a spreadsheet.
+   - **Rejected/Fallback path:**
+     - **Google Sheets** - Logs the rejected/spam enquiry in a separate sheet or with a rejected status.
+
+### Frontend Handling
+
+- On submit, the form shows a loading spinner and disables the button.
+- On success (`200 OK`), a green success message is displayed and the form resets.
+- On failure, a red error message prompts the user to try again or email directly.
+- Messages auto-dismiss after 5 seconds.
+
 ## Getting Started
 
 Open `index.html` in a browser. No build step required.
